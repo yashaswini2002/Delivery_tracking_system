@@ -9,7 +9,8 @@ const shortestDistanceNode = (distances, visited) => {
     // or if the current node's distance is smaller than the current shortest
     let currentIsShortest =
       shortest === null || distances[node] < distances[shortest];
-
+    
+    //testing
     // and if the current node is in the unvisited set
     if (currentIsShortest && !visited.includes(node)) {
       // update shortest to be the current node
