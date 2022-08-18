@@ -1,6 +1,7 @@
 const shortestDistanceNode = (distances, visited) => {
   // create a default value for shortest
   let shortest = null;
+  //this is comment
 
   // for each node in the distances object
   for (let node in distances) {
