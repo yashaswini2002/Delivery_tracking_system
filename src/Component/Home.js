@@ -34,37 +34,37 @@ const Home = () => {
     {
       node1: "R1",
       node2: "H3",
-      distance: 3,
+      distance: 14,
     },
     {
       node1: "R1",
       node2: "H5",
-      distance: 7,
+      distance: 4,
     },
     {
       node1: "R2",
       node2: "H1",
-      distance: 5,
+      distance: 2,
     },
     {
       node1: "R2",
       node2: "H3",
-      distance: 6,
+      distance: 31,
     },
     {
       node1: "R2",
       node2: "H4",
-      distance: 10,
+      distance: 12,
     },
     {
       node1: "R3",
       node2: "H2",
-      distance: 8,
+      distance: 13,
     },
     {
       node1: "R3",
       node2: "H3",
-      distance: 6,
+      distance: 4,
     },
   ]
 
@@ -74,8 +74,8 @@ const Home = () => {
     freezeAllDragEvents: true,
     nodeHighlightBehavior: true,
     node: {
-      color: "lightgreen",
-      highlightStrokeColor: "blue",
+      color: "blue",
+      highlightStrokeColor: "purple",
       fontSize: 16,
     },
     link: {
@@ -112,15 +112,16 @@ const Home = () => {
   const updateDropLocationOfDeliveryLocation = event => {
     setOrderData({ ...orderData, dropLocation: event.target.value })
   }
-
+   
   const finalForm = () => {
     return (
-      <div>
+      <div >
         <div>
-          <div>
-            <h4>Orders</h4>
-            <h5>Live Location</h5>
-            <div>
+          <div style={{ textAlign: "center" }}>
+            <h1>Orders</h1>
+            {/* <h5>Live Location</h5> */}
+            <div style={{ textAlign: "center" }}>
+            <h3>Live Location</h3>
               {deliveryExecutives.map(deliveryPerson => (
                 <div key={deliveryPerson.name}>
                   Delivery Executive {deliveryPerson.name} is at Location {deliveryPerson.startPosition}
@@ -136,7 +137,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <TableContainer component={Paper} className="table">
+        <TableContainer component={Paper} className="dropdown">
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -159,7 +160,7 @@ const Home = () => {
 
         <Grid container style={{ marginTop: "40px" }}>
           <Grid xs={12}>
-            <Button variant="contained" color="primary" onClick={submitOrders}>Submit</Button>
+            <Button variant="contained" id="key" onClick={submitOrders}>submit</Button>
           </Grid>
         </Grid>
       </div>
@@ -239,6 +240,7 @@ const Home = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      
     )
   }
 
@@ -247,18 +249,23 @@ const Home = () => {
       <>
         <Grid container>
           <Grid xs={12}>
-            <h3>Live Ordering System</h3>
+            <h>Live Ordering System</h>
           </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12} md={6}>
-
             <div className="form">
               {getDataTable()}
             </div>
           </Grid>
+        </Grid>
+
+        <Grid container>
           <Grid item xs={12} md={6}>
-            {finalForm()}
+          <div className="form1">
+          {finalForm()}  
+            </div>
+          
           </Grid>
 
           {showGraph ? (
