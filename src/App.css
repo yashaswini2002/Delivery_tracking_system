@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  font-size:medium;
+ 
+  text-shadow: #45480a;
+  color: rgb(3, 34, 69);
 }
 
 .p-name-field {
@@ -15,18 +19,18 @@
   width: 50%;
   height: auto;
   overflow: scroll;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #7ebacc;
   border-radius: 6px;
 }
 
 .form-names {
   display: flex;
-  flex-direction: row;
-  /* align-items: center; */
-  margin: 0 auto;
+  flex-direction:row;
+   align-items: center; 
+   margin: 0 auto;
   justify-content: center;
   justify-content: space-evenly;
-}
+} 
 
 .MuiSelect-select.MuiSelect-select {
   padding-right: 24px;
@@ -34,15 +38,45 @@
 }
 
 .form {
-  width: 90%;
-  margin: 0 auto;
+  width: 120%;
+  margin-left: 350px;
+  margin-right: 350px;
+  margin-top:10px;
   object-fit: contain;
-}
-
-.form {
+  text-align: center;
+  background-color:bisque;
   padding: 20px;
 }
 
+.form1 {
+  width: 120%;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+
 .table {
-  padding: 10px;
+  padding: 1px;
+  font-family:fantasy;
+}
+
+.dropdown {
+  padding: 20px;
+  font-family:fantasy;
+  background-color:bisque;
+}
+
+.Button{
+    background-color: pink;
+}
+
+h1
+{
+  color:black;
+  text-shadow: gray;
+}
+#key
+{
+  text-align: center;
+  color:white;
+  background-color:blueviolet;
 }
